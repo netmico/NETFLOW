@@ -1,0 +1,21 @@
+# Ignore ntopng runtime data
+ntopng-data/
+var/
+logs/
+*.log
+
+# Ignore ntopng license file (if sensitive)
+ntopng.license
+
+# Docker artifacts
+*.pid
+docker-compose.override.yml
+
+# System/Editor files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
