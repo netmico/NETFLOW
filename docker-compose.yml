@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  ntopng:
+    image: ntop/ntopng.dev:latest
+    command: -i ens160
+    network_mode: host
+    volumes:
+      - ./ntopng.license:/etc/ntopng.license:ro
+      - ./ntopng-data:/var/tmp/ntopng
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
